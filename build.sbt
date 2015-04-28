@@ -10,6 +10,8 @@ libraryDependencies += "org.scalafx" %% "scalafx" % "8.0.40-R8"
 // Change this to another test framework if you prefer
 libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.4" % "test"
 
+mainClass in Compile := Some("hello.ScalaFXHelloWorld")
+
 enablePlugins(JDKPackagerPlugin)
 
 jdkPackagerType := "dmg"
