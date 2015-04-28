@@ -14,6 +14,12 @@ mainClass in Compile := Some("hello.ScalaFXHelloWorld")
 
 enablePlugins(JDKPackagerPlugin)
 
+lazy val iconGlob = sys.props("os.name").toLowerCase match {
+  case os if os.contains("mac") ⇒ "*.icns"
+  case os if os.contains("win") ⇒ "*.ico"
+  case _ ⇒ "*.png"
+}
+
 jdkPackagerType := "dmg"
 
 // Uncomment to use Akka
